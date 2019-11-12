@@ -10,27 +10,31 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="SearchFilter" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
+            <rect key="frame" x="0.0" y="0.0" width="181" height="261"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="181" height="261"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="161-eD-mle">
-                        <rect key="frame" x="4" y="4" width="142" height="212"/>
+                        <rect key="frame" x="4" y="4" width="173" height="253"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJ1-YL-qHC">
-                                <rect key="frame" x="4" y="4" width="134" height="144"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJ1-YL-qHC">
+                                <rect key="frame" x="4" y="4" width="165" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="0VW-Y5-9jc"/>
+                                    <constraint firstAttribute="width" secondItem="aJ1-YL-qHC" secondAttribute="height" multiplier="1:1" id="EeT-pV-cVQ"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-Yg-lqQ">
-                                <rect key="frame" x="8" y="156" width="126" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bV-Yg-lqQ">
+                                <rect key="frame" x="8" y="177" width="157" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-UG-FII">
-                                <rect key="frame" x="8" y="184.5" width="126" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="8" y="205.5" width="157" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,14 +62,15 @@
                 <constraint firstAttribute="trailing" secondItem="161-eD-mle" secondAttribute="trailing" constant="4" id="by2-P2-Mkv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="144" height="197"/>
+            <size key="customSize" width="175" height="197"/>
             <connections>
                 <outlet property="bgView" destination="161-eD-mle" id="adA-OY-YGp"/>
+                <outlet property="heightConstraint" destination="0VW-Y5-9jc" id="gbp-Em-1WI"/>
                 <outlet property="priceLabel" destination="eK7-UG-FII" id="h7A-t1-tly"/>
                 <outlet property="productImageView" destination="aJ1-YL-qHC" id="Z0h-1n-zw8"/>
                 <outlet property="titleLabel" destination="0bV-Yg-lqQ" id="su5-n2-RGH"/>
             </connections>
-            <point key="canvasLocation" x="205.79710144927537" y="179.46428571428569"/>
+            <point key="canvasLocation" x="221.01449275362322" y="180.46875"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KgR-AJ-kf2">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4ja-mQ-OTN">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4ja-mQ-OTN">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -26,17 +26,43 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O21-3A-XeV">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dNT-JH-Ezd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7U-HA-MeU">
+                                <rect key="frame" x="0.0" y="861" width="414" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Q7U-HA-MeU" secondAttribute="trailing" id="9e8-an-3xU"/>
+                            <constraint firstAttribute="bottom" secondItem="Q7U-HA-MeU" secondAttribute="bottom" id="E9B-0J-Ote"/>
+                            <constraint firstItem="O21-3A-XeV" firstAttribute="top" secondItem="KgR-AJ-kf2" secondAttribute="bottom" constant="8" id="IL5-sH-6ia"/>
                             <constraint firstItem="KgR-AJ-kf2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L19-iX-gvO"/>
-                            <constraint firstAttribute="bottom" secondItem="KgR-AJ-kf2" secondAttribute="bottom" id="bGw-gn-VCk"/>
+                            <constraint firstItem="Q7U-HA-MeU" firstAttribute="top" secondItem="O21-3A-XeV" secondAttribute="bottom" constant="-1" id="aE4-Pr-wmx"/>
+                            <constraint firstItem="Q7U-HA-MeU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bPI-iq-MJn"/>
+                            <constraint firstItem="O21-3A-XeV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iRh-bM-O3L"/>
                             <constraint firstItem="KgR-AJ-kf2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n2H-ni-Cef"/>
                             <constraint firstItem="KgR-AJ-kf2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oXn-7r-0aI"/>
+                            <constraint firstItem="O21-3A-XeV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pEF-nA-7GN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O21-3A-XeV" secondAttribute="trailing" id="yfT-xb-aUQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="qGq-D6-zv2"/>
+                    <connections>
+                        <outlet property="collectionView" destination="KgR-AJ-kf2" id="mdM-qC-Elr"/>
+                        <outlet property="filterButton" destination="O21-3A-XeV" id="dK1-Bz-VAy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,6 +76,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="phj-Xq-VJo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
